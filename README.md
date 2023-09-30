@@ -1,9 +1,3 @@
-# Fraud_Detection_SQL
-
-![Credit card fraudster](Images/credit_card_fraudster.jpg)
-
-*[Credit Card Fraudster by Richard Patterson](https://www.flickr.com/photos/136770128@N07/42252105582/) | [Creative Commons Licensed](https://creativecommons.org/licenses/by/2.0/)*
-
 ## Background
 
 Fraud is everywhere these days—whether you are a small taco shop or a large international business. While there are emerging technologies that employ machine learning and artificial intelligence to detect fraud, many instances of fraud detection still require strong data analytics to find abnormal charges.
@@ -13,7 +7,7 @@ Application of new SQL skills to analyze historical credit card transactions and
 Accomplish three main tasks:
 
 1. [Data Modeling](#Data-Modeling):
-Define a database model to store the credit card transactions data and create a new PostgreSQL database using your model.
+Define a database model to store the credit card transaction data and create a new PostgreSQL database using your model.
 
 2. [Data Engineering](#Data-Engineering): Create a database schema on PostgreSQL and populate your database from the CSV files provided.
 
@@ -43,7 +37,7 @@ Create an entity relationship diagram (ERD) by inspecting the provided CSV files
 
 **Note:** For the `credit_card` table, the `card` column should be a VARCHAR(20) datatype rather than an INT.
 
-Tool used to develop ERD [Quick Database Diagrams](https://app.quickdatabasediagrams.com/#/) to create your model.
+The tool used to develop ERD [Quick Database Diagrams](https://app.quickdatabasediagrams.com/#/) to create your model.
 
 ![QuickDBD-export](Images/QuickDBD-export.png)
 
@@ -75,20 +69,20 @@ Created a report for fraudulent transactions of some top customers of the firm u
  ![id_holder_2](Images/id_holder_2.PNG)
  ![id_holder_18](Images/id_holder_18.PNG)
   
-  * Observation : `The consumption pattern for both the id holder is very different. Id Holder 2 makes too many small transactions. Id Holder 18 has transactions ranging till $1839. Id Holder 2 is more suspectable to fraudulent transactions`
+  * Observation: `The consumption pattern for both the ID holders is very different. Id Holder 2 makes too many small transactions. Id Holder 18 has transactions ranging from $1839. Id Holder 2 is more suspectable to fraudulent transactions
 
-* The CEO of the firm's biggest customer suspects that someone has used her corporate credit card without authorization in the first quarter of 2018 to pay for several expensive restaurant bills. You are asked to find any anomalous transactions during that period.
+* The CEO of the firm's biggest customer suspects that someone used her corporate credit card without authorization in the first quarter of 2018 to pay for several expensive restaurant bills. You are asked to find any anomalous transactions during that period.
 
   * Using Plotly Express, created a series of six box plots, one for each month, in order to identify how many outliers there are per month for cardholder ID 25.
   
   ![id_holder_25](Images/id_holder_25.PNG)
 
-  * Observations : `There seems to be fraudulent transactions pertaining to Restaurant & Food Truck category where Food Truck is ranging from $1.46 to $1046`
+  * Observations: `There seem to be fraudulent transactions pertaining to the Restaurant & Food Truck category where Food Truck is ranging from $1.46 to $1046`
 
 
 ## Challenge
 
-Another approach to identify fraudulent transactions is to look for outliers in the data. Standard deviation or quartiles are often used to detect outliers.
+Another approach to identifying fraudulent transactions is to look for outliers in the data. Standard deviation or quartiles are often used to detect outliers.
 
 #### Identifying Outliers based on Standard Deviation
 
